@@ -1,5 +1,4 @@
-# Welcome-Cobbin
-First activity on github
+This is a repository for basic hardware aduino codes.
+This project is to create basic template codes for how most aduino devices or sensors work.
+It is something in progress so please your views are warmly welcomed.
 
-Hey! Does this really work?
-Just asking because i am curious.
