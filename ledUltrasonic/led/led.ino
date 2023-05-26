@@ -1,29 +1,26 @@
-byte trig = 11;
-byte echo = 12;
-byte ledPin = 13;
+int trig = 11;
+int echo = 12;
+int ledPin = 13;
 
 
 
 void setup() {
-pinMode(red, OUTPUT);display
-pinMode(yellow, OUTPUT);display
-pinMode(green, OUTPUT);display
+pinMode(ledPin, OUTPUT);
 Serial.begin(9600);
 }
 
 void loop() {
-digitalWrite(red, HIGH);
-delayMicroseconds(100);
-digitalWrite(yellow, HIGH);
-delayMicroseconds(5000);
-digitalWrite(green, LOW);
-delayMicroseconds(1000)
+digitalWrite(trig, LOW);
+delayMicroseconds(10);
+digitalWrite(trig, HIGH);
+delayMicroseconds(15);
+digitalWrite(trig, LOW);
 long duration, distance;
 duration = pulseIn(echo,HIGH);
-distance = duration/58.8;
+distance = duration/58.8; //scaling the reading to centimeters
 Serial.print(distance);
 Serial.println(" cm");
-
+//using ternary to switch LED state based on distance
 distance <= 10 ? digitalWrite(ledPin,HIGH) : digitalWrite(ledPin,LOW);
 
 
